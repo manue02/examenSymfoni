@@ -45,4 +45,34 @@ class FacturaRepository extends ServiceEntityRepository
     //            ->getOneOrNullResult()
     //        ;
     //    }
+
+    public function consulta2(): array
+    {
+        return $this->createQueryBuilder('facturas')
+            ->select(
+                'facturas.total',
+                'facturas.estadoPago',
+                'facturas.fechaEmision',
+            )
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function consulta3($idEmpleado): array
+    {
+        return $this->createQueryBuilder('facturas')
+            ->select(
+                'facturas.total',
+                'facturas.estadoPago',
+                'facturas.fechaEmision',
+                'empleado.nombre'
+            )
+            ->innerJoin('facturas.idEmpleado', 'empleado')
+            ->where('empleado.id = :idEmpleado')
+            ->setParameter('idEmpleado', $idEmpleado)
+            ->getQuery()
+            ->getResult();
+    }
+
+
 }

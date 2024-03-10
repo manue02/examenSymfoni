@@ -45,4 +45,35 @@ class EmpleadoRepository extends ServiceEntityRepository
     //            ->getOneOrNullResult()
     //        ;
     //    }
+
+    public function consulta1(): array
+    {
+        return $this->createQueryBuilder('empleado')
+            ->select(
+                'empleado.nombre',
+                'empleado.puesto',
+                'empleado.apellido',
+                'empleado.email'
+            )
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function consulta4($idEmpleado): array
+    {
+        return $this->createQueryBuilder('empleado')
+            ->select(
+                'empleado.nombre as nombreEmpleado',
+                'empleado.apellido',
+                'empleado.puesto',
+                'empleado.email',
+                'servicio.nombre as nombreServicio',
+                'servicio.precio'
+            )
+            ->innerJoin('empleado.servicio', 'servicio')
+            ->where('empleado.id = :idEmpleado')
+            ->setParameter('idEmpleado', $idEmpleado)
+            ->getQuery()
+            ->getResult();
+    }
 }

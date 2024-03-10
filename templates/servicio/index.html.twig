@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ServicioController!{% endblock %}
+
+{% block body %}
+
+{% if formulario is defined %}
+
+    <section class="w-50 p-3 m-3">
+        {{ form_start(formulario) }}
+            {{ form_widget(formulario) }}
+        {{ form_end(formulario) }}
+    </section>
+    
+<a href="http://127.0.0.1:8000/servicio/verServicios" class="btn btn-primary">Listado Servicios</a>
+{% endif %}
+
+{% endblock %}
