@@ -46,29 +46,13 @@
 
   {# creame card de boostrap para poner todos los endpoints #}
 
-<div class="container mt-3 mt-4">
-  <h2>Para la entidad Servicio</h2>
-  <div class="card mt-4">
-    <div class="card-body">http://127.0.0.1:8000/servicio/verServicios -> Muestra los servicios disponibles. </div>
-  </div>
-   <div class="card mt-4">
-    <div class="card-body">campos -> /{idServicio} Ejmplo -> http://127.0.0.1:8000/servicio/eliminarServicio/2 -> Elimina el servicio con id 2.</div>
-  </div>
-   <div class="card mt-4">
-    <div class="card-body">campos -> /{idServicio}/{nombre}/{precio}/{disponibilidad} Ejemplo -> http://127.0.0.1:8000/servicio/editarServicio/1/Reparacion/1000/1 -> Edita el servicio con id 1.</div>
-  </div>
-   <div class="card mt-4">
-    <div class="card-body">http://127.0.0.1:8000/servicio/insertarServicio -> Inserta un nuevo servicio.</div>
-  </div>
-</div>
-
-<div class="container mt-3 mt-4">
-  <h2>Para la entidad Servicio</h2>
-  <div class="card mt-4">
-    <div class="card-body">http://127.0.0.1:8000/empleado/verEmpleados -> Muestra los empleados. </div>
-  </div>
+  <div class="container mt-3 mt-4">
+  <h2>Para la entidad Empleados</h2>
    <div class="card mt-4">
     <div class="card-body">http://127.0.0.1:8000/empleado/insertarEmpleado -> Inserta un nuevo empleado.</div>
+  </div>
+  <div class="card mt-4">
+    <div class="card-body">http://127.0.0.1:8000/empleado/verEmpleados -> Muestra los empleados. </div>
   </div>
    <div class="card mt-4">
     <div class="card-body">campos -> /{idEmpleado} Ejemplo -> http://127.0.0.1:8000/empleado/verServicioEmpleado/1 -> Muestra los servicios echos por un empleado concreto.</div>
@@ -78,10 +62,26 @@
 <div class="container mt-3 mt-4">
   <h2>Para la entidad Servicio</h2>
   <div class="card mt-4">
-    <div class="card-body">http://127.0.0.1:8000/factura/verFacturas -> Muestra las facturas. </div>
+    <div class="card-body">http://127.0.0.1:8000/servicio/insertarServicio -> Inserta un nuevo servicio.</div>
+  </div>
+  <div class="card mt-4">
+    <div class="card-body">http://127.0.0.1:8000/servicio/verServicios -> Muestra los servicios disponibles. </div>
   </div>
    <div class="card mt-4">
+    <div class="card-body">campos -> /{idServicio} Ejmplo -> http://127.0.0.1:8000/servicio/eliminarServicio/2 -> Elimina el servicio con id 2.</div>
+  </div>
+   <div class="card mt-4">
+    <div class="card-body">campos -> /{idServicio}/{nombre}/{precio}/{disponibilidad} Ejemplo -> http://127.0.0.1:8000/servicio/editarServicio/1/Reparacion/1000/1 -> Edita el servicio con id 1.</div>
+  </div>
+</div>
+
+<div class="container mt-3 mt-4">
+  <h2>Para la entidad Facturas</h2>
+  <div class="card mt-4">
     <div class="card-body">http://127.0.0.1:8000/factura/insertarFactura -> Inserta una nueva factura.</div>
+  </div>
+  <div class="card mt-4">
+    <div class="card-body">http://127.0.0.1:8000/factura/verFacturas -> Muestra las facturas. </div>
   </div>
    <div class="card mt-4 mb-4">
     <div class="card-body">campos -> /{idEmpleado} Ejemplo -> http://127.0.0.1:8000/factura/verFacturasEmpleado/1 -> Muestra las facturas echas por un empleado concreto.</div>
